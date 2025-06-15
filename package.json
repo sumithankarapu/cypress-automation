@@ -5,5 +5,12 @@
     "cypress": "^14.4.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "esbuild": "^0.25.5"
+  },
+    "scripts": {
+    "test:ui": "cypress run --spec 'cypress/e2e/ui/**/*.cy.js'",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**/*.feature'",
+    "test:all": "cypress run",
+    "test:open": "cypress open",
+    "report:open": "npx mochawesome-merge cypress/reports/*.json | npx mochawesome-report-generator --reportDir cypress/reports --inline"
   }
 }

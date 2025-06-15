@@ -19,7 +19,7 @@ module.exports = defineConfig({
   screenshotOnRunFailure: true,
   e2e: {
     specPattern: "cypress/e2e/**/*.{cy.js,feature}",
-    baseUrl: "https://your-app-url.com",
+    baseUrl: "https://magento.softwaretestingboard.com",
 
     setupNodeEvents(on, config) {
       // Attach reporters
