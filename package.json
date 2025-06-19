@@ -7,8 +7,8 @@
     "esbuild": "^0.25.5"
   },
     "scripts": {
-    "test:ui": "cypress run --spec 'cypress/e2e/ui/**/*.cy.js'",
-    "test:api": "cypress run --spec 'cypress/e2e/api/**/*.feature'",
+    "test:ui": "cypress run --spec 'cypress/e2e/ui-automation/**/*.cy.js'",
+    "test:api": "cypress run --spec 'cypress/e2e/api-automation/**/*.feature'",
     "test:all": "cypress run",
     "test:open": "cypress open",
     "report:open": "npx mochawesome-merge cypress/reports/*.json | npx mochawesome-report-generator --reportDir cypress/reports --inline"

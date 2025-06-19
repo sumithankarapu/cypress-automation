@@ -26,7 +26,9 @@ export default class MenJackets {
       cy.contains(orMenJackets.optionLink, size).scrollIntoView().click({force: true})
     })
     cy.get(orMenJackets.productItem).eq(0).click();
+    cy.intercept('GET','**/media/catalog/product/**').as('cataLog')
     cy.cClick(orMenJackets.getAriaLabel(size))
+    cy.wait('@cataLog')
     cy.cClick(orMenJackets.getAriaLabel(color))
     cy.intercept('POST', '**/checkout/cart/add/**').as('addToCart');
     cy.intercept('GET', '**/customer/section/load/**').as('loadCustomerSection');
